@@ -59,4 +59,26 @@ public class MarkdownParseTest {
        //a.add("some-thing.html");
         assertEquals((a), MarkdownParse.getLinks(content) );
     }
+    @Test 
+    public void getLinksCheck5() throws IOException{
+        
+        String fileName = "test-file9.md";
+        Path fileName1 = Path.of(fileName);
+        String content = Files.readString(fileName1);
+       ArrayList<String> a=new ArrayList<String>();
+       //a.add("");
+       //a.add("some-thing.html");
+        assertEquals((a), MarkdownParse.getLinks(content) );
+    }
+    @Test 
+    public void getLinksCheck6() throws IOException{
+        
+        String fileName = "test-file9.md";
+        Path fileName1 = Path.of(fileName);
+        String content = Files.readString(fileName1);
+       ArrayList<String> a=new ArrayList<String>();
+       //a.add("");
+       //a.add("some-thing.html");
+        assertEquals((a), MarkdownParse.getLinks(content) );
+    }
 }
