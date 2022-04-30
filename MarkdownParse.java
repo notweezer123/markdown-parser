@@ -21,7 +21,11 @@ public class MarkdownParse {
             if (closeParen + 1 <= currentIndex){
                 break;
             }
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            String returnable = markdown.substring(openParen + 1, closeParen); 
+            if(returnable.indexOf(" ") != -1){
+                continue;
+            }
+            toReturn.add(returnable); 
             // System.out.println("openParen:"+"   "+openParen);
             // System.out.println("closeParen:"+"   "+closeParen);
             // System.out.println("index:"+"   "+currentIndex);
