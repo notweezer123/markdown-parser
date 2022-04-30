@@ -22,9 +22,9 @@ public class MarkdownParse {
                 break;
             }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
-            System.out.println("openParen:"+"   "+openParen);
-            System.out.println("closeParen:"+"   "+closeParen);
-            System.out.println("index:"+"   "+currentIndex);
+            // System.out.println("openParen:"+"   "+openParen);
+            // System.out.println("closeParen:"+"   "+closeParen);
+            // System.out.println("index:"+"   "+currentIndex);
             if(exclamation + 1 == openBracket){
                 toReturn.remove(markdown.substring(openParen + 1, closeParen));
                 //System.out.println("aaaaaa");
