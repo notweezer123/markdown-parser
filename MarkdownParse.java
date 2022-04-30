@@ -29,10 +29,15 @@ public class MarkdownParse {
             // System.out.println("openParen:"+"   "+openParen);
             // System.out.println("closeParen:"+"   "+closeParen);
             // System.out.println("index:"+"   "+currentIndex);
-            if(exclamation + 1 == openBracket&&exclamation!=-1 && returnable.indexOf(" ") != -1){
+            if((exclamation + 1 == openBracket&&exclamation!=-1 ) || returnable.indexOf(" ") != -1){
                 toReturn.remove(returnable);
                 //System.out.println("aaaaaa");
             }
+            // else if(returnable.indexOf(" ") != -1){
+            //     toReturn.remove(returnable);
+            //     //System.out.println("aaaaaa");
+            // }
+            
             currentIndex = closeParen + 1;
            // System.out.println(currentIndex);
         }
