@@ -25,7 +25,7 @@ public class MarkdownParse {
             // System.out.println("openParen:"+"   "+openParen);
             // System.out.println("closeParen:"+"   "+closeParen);
             // System.out.println("index:"+"   "+currentIndex);
-            if(exclamation + 1 == openBracket){
+            if(exclamation + 1 == openBracket&&exclamation!=-1){
                 toReturn.remove(markdown.substring(openParen + 1, closeParen));
                 //System.out.println("aaaaaa");
             }
