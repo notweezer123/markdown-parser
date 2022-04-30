@@ -22,15 +22,15 @@ public class MarkdownParse {
                 break;
             }
             String returnable = markdown.substring(openParen + 1, closeParen); 
-            if(returnable.indexOf(" ") != -1){
-                continue;
-            }
+            // if(returnable.indexOf(" ") != -1){
+            //     continue;
+            // }
             toReturn.add(returnable); 
             // System.out.println("openParen:"+"   "+openParen);
             // System.out.println("closeParen:"+"   "+closeParen);
             // System.out.println("index:"+"   "+currentIndex);
-            if(exclamation + 1 == openBracket&&exclamation!=-1){
-                toReturn.remove(markdown.substring(openParen + 1, closeParen));
+            if(exclamation + 1 == openBracket&&exclamation!=-1 && returnable.indexOf(" ") != -1){
+                toReturn.remove(returnable);
                 //System.out.println("aaaaaa");
             }
             currentIndex = closeParen + 1;
