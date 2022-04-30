@@ -57,6 +57,6 @@ public class MarkdownParseTest {
        ArrayList<String> a=new ArrayList<String>();
        //a.add("");
        //a.add("some-thing.html");
-        assertEquals((a), MarkdownParse.getLinks(content) );
+        assertEquals((null), MarkdownParse.getLinks(content) );
     }
 }
