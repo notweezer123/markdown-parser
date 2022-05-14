@@ -13,13 +13,13 @@ public class MarkdownParseTest {
 
     @Test 
     public void getLinksCheck1() throws IOException{
-        
+
         String fileName = "test-file.md";
         Path fileName1 = Path.of(fileName);
         String content = Files.readString(fileName1);
-       ArrayList<String> a=new ArrayList<String>();
-       a.add("https://something.com");
-       a.add("some-thing.html");
+        ArrayList<String> a=new ArrayList<String>();
+        a.add("https://something.com");
+        a.add("some-thing.html");
         assertEquals((a), MarkdownParse.getLinks(content) );
     }
 
@@ -81,4 +81,8 @@ public class MarkdownParseTest {
        //a.add("some-thing.html");
         assertEquals((a), MarkdownParse.getLinks(content) );
     }
+    // @Test
+    // public void testUniverseWorks() {
+    //     assertEquals(1,1);
+    // }
 }
